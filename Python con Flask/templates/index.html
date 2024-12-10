@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimación COCOMO Completa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>ESTIMACIÓN DE COSTOS DE SOFTWARE COCOMO I</h1>
+    </header>
+    <div class="content">
+        <h1>PRACTICA 2</h1>
+        <p>ERLAND REYNALDO CHAMBI QUIRUCHI</p>
+        <p>CI : 13424772</p>
+        <p>RU : 200059961</p>
+    </div>
+    <form method="POST">
+        <div>
+            <label for="entrada">Entrada:</label>
+            <input type="number" id="entrada" name="entrada" step="any" required>
+        </div>
+
+        <div>
+            <label for="salida">Salida:</label>
+            <input type="number" id="salida" name="salida" step="any" required>
+        </div>
+
+        <div>
+            <label for="tipo_proyecto">Selecciona el tipo de proyecto:</label>
+            <select name="tipo_proyecto" id="tipo_proyecto" required>
+                <option value="organico">Orgánico</option>
+                <option value="semi_aplicado">Semi-Aplicado</option>
+                <option value="acoplado">Acoplado</option>
+            </select>
+        </div>
+        <div>
+            <label for="factor">Entrada de datos:</label>
+            <input type="number" id="factor" name="factor" step="any" required>
+        </div>
+        
+        <div>
+            <label for="salario">Salario por persona:</label>
+            <input type="number" id="salario" name="salario" step="any" required>
+        </div>
+
+        <button type="submit">Calcular</button>
+    </form>
+    </div>
+    {% if total is not none %}
+    <section>
+        <h2>Resultados</h2>
+        <p><strong>Total:</strong>{{ total }}</p>
+        <p><strong>LDC:</strong> {{ ldc }}</p>
+        <p><strong>MLDC:</strong> {{ mldc }}</p>
+        <p><strong>Esfuerzo (E):</strong> {{ esfuerzo }}</p>
+        <p><strong>Tiempo de Desarrollo (TD):</strong> {{ td }}</p>
+        <p><strong>Personal Necesario (CP):</strong> {{ cp }}</p>
+        <p><strong>Estimación de la Productividad (P):</strong> {{ p }}</p>
+        <p><strong>Costo del Software:</strong> {{ costo }} Bs</p>
+        <p><strong>Costo por Línea de Código (LDC):</strong> {{ costo_ldc }} Bs</p>
+    </section>
+    {% endif %}
+</body>
+</html>

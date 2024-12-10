@@ -1,0 +1,136 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body con fondo suave y una fuente moderna */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f19ca;
+    color: #f1e5e5;
+    line-height: 1.6;
+}
+
+/* Header con fondo degradado y texto centrado */
+header {
+    background: linear-gradient(to right, #013d03, #08b561);
+    color: rgb(233, 235, 243);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    color: #e3d9d9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulario estilizado con bordes redondeados y sombreado */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Añadir un efecto cuando el formulario esté en foco */
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #f8f1f1;
+}
+
+/* Estilo para los inputs y select */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #60afc1;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border 0.3s ease;
+}
+
+/* Efecto de borde al enfocar los inputs y selects */
+input:focus, select:focus {
+    border: 2px solid #be8d32;
+    outline: none;
+}
+
+/* Estilo para el botón con transiciones */
+button {
+    padding: 12px 25px;
+    background-color: #d16d25;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+button:hover {
+    background-color: #af1a0cd4;
+}
+
+/* Estilo para las secciones con un fondo suave y sombra */
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de sección */
+h2 {
+    font-size: 2em;
+    color: #6f6e72;
+    margin-bottom: 20px;
+    text-align: center;
+}
+section
+{
+    background-color: #160a31;
+}
+
+form{
+    background-color: #18048e;
+}
+/* Diseño de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
